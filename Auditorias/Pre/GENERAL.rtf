@@ -1,0 +1,577 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\csgray\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 sudo nmap -sV -sC -p- -Pn -T4 192.168.1.1 -oA /home/debian/auditorias/pre/2_puertos_192.168.1.1\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \CocoaLigature0 sudo nmap -sV -F -T5 192.168.1.1
+\f0\fs24 \cf0 \CocoaLigature1 \
+
+\f1\fs22 \cf2 \CocoaLigature0 Nmap scan report for OPNsense.internal (192.168.1.1)\
+Host is up (0.11s latency).\
+Not shown: 97 filtered tcp ports (no-response)\
+PORT    STATE SERVICE   VERSION\
+53/tcp  open  domain    Unbound 1.24.2\
+80/tcp  open  http      OPNsense\
+443/tcp open  ssl/https OPNsense\
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :\
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============\
+SF-Port80-TCP:V=7.93%I=7%D=7/21%Time=6A5F89C3%P=x86_64-pc-linux-gnu%r(GetR\
+SF:equest,94,"HTTP/1\\.0\\x20301\\x20Moved\\x20Permanently\\r\\nLocation:\\x20htt\
+SF:ps:///\\r\\nContent-Length:\\x200\\r\\nConnection:\\x20close\\r\\nDate:\\x20Tue,\
+SF:\\x2021\\x20Jul\\x202026\\x2015:01:22\\x20GMT\\r\\nServer:\\x20OPNsense\\r\\n\\r\\n\
+SF:")%r(HTTPOptions,94,"HTTP/1\\.0\\x20301\\x20Moved\\x20Permanently\\r\\nLocati\
+SF:on:\\x20https:///\\r\\nContent-Length:\\x200\\r\\nConnection:\\x20close\\r\\nDat\
+SF:e:\\x20Tue,\\x2021\\x20Jul\\x202026\\x2015:01:23\\x20GMT\\r\\nServer:\\x20OPNsen\
+SF:se\\r\\n\\r\\n")%r(RTSPRequest,136,"HTTP/1\\.0\\x20400\\x20Bad\\x20Request\\r\\nC\
+SF:ontent-Type:\\x20text/html\\r\\nContent-Length:\\x20162\\r\\nConnection:\\x20c\
+SF:lose\\r\\nDate:\\x20Tue,\\x2021\\x20Jul\\x202026\\x2015:01:23\\x20GMT\\r\\nServer\
+SF::\\x20OPNsense\\r\\n\\r\\n<!DOCTYPE\\x20html>\\n<html\\x20lang=\\"en\\">\\n\\x20<he\
+SF:ad>\\n\\x20\\x20<meta\\x20charset=\\"UTF-8\\"\\x20/>\\n\\x20\\x20<title>400\\x20Ba\
+SF:d\\x20Request</title>\\n\\x20</head>\\n\\x20<body>\\n\\x20\\x20<h1>400\\x20Bad\\x\
+SF:20Request</h1>\\n\\x20</body>\\n</html>\\n")%r(FourOhFourRequest,B3,"HTTP/1\
+SF:\\.0\\x20301\\x20Moved\\x20Permanently\\r\\nLocation:\\x20https:///nice%20port\
+SF:s%2C/Trinity\\.txt\\.bak\\r\\nContent-Length:\\x200\\r\\nConnection:\\x20close\\\
+SF:r\\nDate:\\x20Tue,\\x2021\\x20Jul\\x202026\\x2015:01:29\\x20GMT\\r\\nServer:\\x20\
+SF:OPNsense\\r\\n\\r\\n")%r(GenericLines,136,"HTTP/1\\.0\\x20400\\x20Bad\\x20Reque\
+SF:st\\r\\nContent-Type:\\x20text/html\\r\\nContent-Length:\\x20162\\r\\nConnectio\
+SF:n:\\x20close\\r\\nDate:\\x20Tue,\\x2021\\x20Jul\\x202026\\x2015:01:29\\x20GMT\\r\\\
+SF:nServer:\\x20OPNsense\\r\\n\\r\\n<!DOCTYPE\\x20html>\\n<html\\x20lang=\\"en\\">\\n\
+SF:\\x20<head>\\n\\x20\\x20<meta\\x20charset=\\"UTF-8\\"\\x20/>\\n\\x20\\x20<title>40\
+SF:0\\x20Bad\\x20Request</title>\\n\\x20</head>\\n\\x20<body>\\n\\x20\\x20<h1>400\\x\
+SF:20Bad\\x20Request</h1>\\n\\x20</body>\\n</html>\\n")%r(DNSVersionBindReqTCP,\
+SF:136,"HTTP/1\\.0\\x20400\\x20Bad\\x20Request\\r\\nContent-Type:\\x20text/html\\r\
+SF:\\nContent-Length:\\x20162\\r\\nConnection:\\x20close\\r\\nDate:\\x20Tue,\\x2021\
+SF:\\x20Jul\\x202026\\x2015:01:34\\x20GMT\\r\\nServer:\\x20OPNsense\\r\\n\\r\\n<!DOCT\
+SF:YPE\\x20html>\\n<html\\x20lang=\\"en\\">\\n\\x20<head>\\n\\x20\\x20<meta\\x20chars\
+SF:et=\\"UTF-8\\"\\x20/>\\n\\x20\\x20<title>400\\x20Bad\\x20Request</title>\\n\\x20<\
+SF:/head>\\n\\x20<body>\\n\\x20\\x20<h1>400\\x20Bad\\x20Request</h1>\\n\\x20</body>\
+SF:\\n</html>\\n");\
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============\
+SF-Port443-TCP:V=7.93%T=SSL%I=7%D=7/21%Time=6A5F89CA%P=x86_64-pc-linux-gnu\
+SF:%r(GetRequest,90A,"HTTP/1\\.0\\x20200\\x20OK\\r\\nSet-Cookie:\\x20PHPSESSID=e\
+SF:510c3d491973109e6a3b63afbf584ce;\\x20path=/;\\x20secure;\\x20HttpOnly;\\x20\
+SF:SameSite=Lax\\r\\nSet-Cookie:\\x20PHPSESSID=e510c3d491973109e6a3b63afbf584\
+SF:ce;\\x20path=/;\\x20secure;\\x20HttpOnly\\r\\nExpires:\\x20Thu,\\x2019\\x20Nov\\\
+SF:x201981\\x2008:52:00\\x20GMT\\r\\nCache-Control:\\x20no-store,\\x20no-cache,\\\
+SF:x20must-revalidate\\r\\nPragma:\\x20no-cache\\r\\nContent-Security-Policy:\\x\
+SF:20default-src\\x20'self';\\x20script-src\\x20'self'\\x20'unsafe-inline'\\x20\
+SF:'unsafe-eval';\\x20style-src\\x20'self'\\x20'unsafe-inline'\\x20'unsafe-eva\
+SF:l';\\r\\nX-Frame-Options:\\x20SAMEORIGIN\\r\\nX-Content-Type-Options:\\x20nos\
+SF:niff\\r\\nX-XSS-Protection:\\x201;\\x20mode=block\\r\\nReferrer-Policy:\\x20sa\
+SF:me-origin\\r\\nContent-type:\\x20text/html;\\x20charset=UTF-8\\r\\nContent-Le\
+SF:ngth:\\x201603\\r\\nConnection:\\x20close\\r\\nDate:\\x20Tue,\\x2021\\x20Jul\\x20\
+SF:2026\\x2015:01:30\\x20GMT\\r\\nServer:\\x20OPNsense\\r\\n\\r\\n<!doctype\\x20html\
+SF:>\\n<html\\x20lang=\\"en-US\\"\\x20class=\\"no-js\\">\\n\\x20\\x20<head>\\n\\n\\x20\\\
+SF:x20\\x20\\x20<meta\\x20charset=\\"UTF-8\\"\\x20/>\\n\\x20\\x20\\x20\\x20<meta\\x20h\
+SF:ttp-equiv=\\"X-UA-Compatible\\"\\x20content=\\"IE=edge\\">\\n\\n\\x20\\x20\\x20\\x\
+SF:20<meta\\x20name=\\"robots\\"\\x20content=\\"noindex,")%r(HTTPOptions,398,"H\
+SF:TTP/1\\.0\\x20403\\x20Forbidden\\r\\nSet-Cookie:\\x20PHPSESSID=5b9b53fa91d3d8\
+SF:fbac729084342979f4;\\x20path=/;\\x20secure;\\x20HttpOnly;\\x20SameSite=Lax\\\
+SF:r\\nExpires:\\x20Thu,\\x2019\\x20Nov\\x201981\\x2008:52:00\\x20GMT\\r\\nCache-Co\
+SF:ntrol:\\x20no-store,\\x20no-cache,\\x20must-revalidate\\r\\nPragma:\\x20no-ca\
+SF:che\\r\\nContent-type:\\x20text/html;\\x20charset=UTF-8\\r\\nContent-Length:\\\
+SF:x20553\\r\\nConnection:\\x20close\\r\\nDate:\\x20Tue,\\x2021\\x20Jul\\x202026\\x2\
+SF:015:01:30\\x20GMT\\r\\nServer:\\x20OPNsense\\r\\n\\r\\n<html><head><title>CSRF\\\
+SF:x20check\\x20failed</title>\\n\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x2\
+SF:0\\x20<script>\\n\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\
+SF:\\$\\(\\x20document\\x20\\)\\.ready\\(function\\(\\)\\x20\{\\n\\x20\\x20\\x20\\x20\\x20\\\
+SF:x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\$\\.ajaxSetup\\(\{\\n\\x\
+SF:20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20'\
+SF:beforeSend':\\x20function\\(xhr\\)\\x20\{\\n\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\\
+SF:x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20xhr\\.setRequestH\
+SF:eader\\(\\"X-CSRFToken\\",\\x20\\"mr7CsTIhALW1gKPPzxCO8g\\"\\x20\\);\\n\\x20\\x20\\\
+SF:x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\}\\n\\x20\\\
+SF:x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\}\\);\\n\\x20\\x\
+SF:20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\}\\);\\n\\x20\\x20\\x20\\x2\
+SF:0\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20</script>\\n\\x20\\x20\\x20\\x20\\x20\\x20\\x2\
+SF:0\\x20\\x20\\x20\\x20\\x20</head>\\n\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\\
+SF:x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20<body>\\n\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\
+SF:\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20<p>CSRF\\x20check\\x20failed\\.\\x2\
+SF:0Your\\x20form\\x20session\\x20may\\x20have\\x20expired,\\x20or\\x20you\\x20may\
+SF:\\x20not\\x20have\\x20cookies\\x20enabled\\.</p>\\n\\x20\\x20\\x20\\x20\\x20\\x20\\x\
+SF:20\\x20\\x20\\x20\\x20\\x20");\
+MAC Address: 0C:6C:79:B8:00:00 (Unknown)\
+\
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .\
+Nmap done: 1 IP address (1 host up) scanned in 171.55 seconds\
+\
+\'97\'97\'97\'97\
+
+\f0\fs24 \cf0 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 sudo nmap -sV -sC -p- -Pn -T4 192.168.1.16 -oA /home/debian/auditorias/pre/2_puertos_192.168.1.16\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \CocoaLigature0 sudo nmap -sV -F -T5 192.168.1.16\
+\
+Starting Nmap 7.93 ( https://nmap.org ) at 2026-07-21 15:04 UTC\
+[ 1450.816030] clocksource: timekeeping watchdog on CPU1: kvm-clock retried 2 times before success\
+Nmap scan report for 192.168.1.16\
+Host is up (0.029s latency).\
+\
+PORT      STATE SERVICE    VERSION\
+7/tcp     open  tcpwrapped\
+9/tcp     open  tcpwrapped\
+13/tcp    open  tcpwrapped\
+21/tcp    open  tcpwrapped\
+22/tcp    open  tcpwrapped\
+23/tcp    open  tcpwrapped\
+25/tcp    open  tcpwrapped\
+26/tcp    open  tcpwrapped\
+37/tcp    open  tcpwrapped\
+53/tcp    open  tcpwrapped\
+79/tcp    open  tcpwrapped\
+80/tcp    open  tcpwrapped\
+81/tcp    open  tcpwrapped\
+88/tcp    open  tcpwrapped\
+106/tcp   open  tcpwrapped\
+110/tcp   open  tcpwrapped\
+111/tcp   open  tcpwrapped\
+113/tcp   open  tcpwrapped\
+119/tcp   open  tcpwrapped\
+135/tcp   open  tcpwrapped\
+139/tcp   open  tcpwrapped\
+143/tcp   open  tcpwrapped\
+144/tcp   open  tcpwrapped\
+179/tcp   open  tcpwrapped\
+199/tcp   open  tcpwrapped\
+389/tcp   open  tcpwrapped\
+427/tcp   open  tcpwrapped\
+443/tcp   open  tcpwrapped\
+444/tcp   open  tcpwrapped\
+445/tcp   open  tcpwrapped\
+465/tcp   open  tcpwrapped\
+513/tcp   open  tcpwrapped\
+514/tcp   open  tcpwrapped\
+515/tcp   open  tcpwrapped\
+543/tcp   open  tcpwrapped\
+544/tcp   open  tcpwrapped\
+548/tcp   open  tcpwrapped\
+554/tcp   open  tcpwrapped\
+587/tcp   open  tcpwrapped\
+631/tcp   open  tcpwrapped\
+646/tcp   open  tcpwrapped\
+873/tcp   open  tcpwrapped\
+990/tcp   open  tcpwrapped\
+993/tcp   open  tcpwrapped\
+995/tcp   open  tcpwrapped\
+1025/tcp  open  tcpwrapped\
+1026/tcp  open  tcpwrapped\
+1027/tcp  open  tcpwrapped\
+1028/tcp  open  tcpwrapped\
+1029/tcp  open  tcpwrapped\
+1110/tcp  open  tcpwrapped\
+1433/tcp  open  tcpwrapped\
+1720/tcp  open  tcpwrapped\
+1723/tcp  open  tcpwrapped\
+1755/tcp  open  tcpwrapped\
+1900/tcp  open  tcpwrapped\
+2000/tcp  open  tcpwrapped\
+2001/tcp  open  tcpwrapped\
+2049/tcp  open  tcpwrapped\
+2121/tcp  open  tcpwrapped\
+2717/tcp  open  tcpwrapped\
+3000/tcp  open  tcpwrapped\
+3128/tcp  open  tcpwrapped\
+3306/tcp  open  tcpwrapped\
+3389/tcp  open  tcpwrapped\
+3986/tcp  open  tcpwrapped\
+4899/tcp  open  tcpwrapped\
+5000/tcp  open  tcpwrapped\
+5009/tcp  open  tcpwrapped\
+5051/tcp  open  tcpwrapped\
+5060/tcp  open  tcpwrapped\
+5101/tcp  open  tcpwrapped\
+5190/tcp  open  tcpwrapped\
+5357/tcp  open  tcpwrapped\
+5432/tcp  open  tcpwrapped\
+5631/tcp  open  tcpwrapped\
+5666/tcp  open  tcpwrapped\
+5800/tcp  open  tcpwrapped\
+5900/tcp  open  tcpwrapped\
+6000/tcp  open  tcpwrapped\
+6001/tcp  open  tcpwrapped\
+6646/tcp  open  tcpwrapped\
+7070/tcp  open  tcpwrapped\
+8000/tcp  open  tcpwrapped\
+8008/tcp  open  tcpwrapped\
+8009/tcp  open  tcpwrapped\
+8080/tcp  open  tcpwrapped\
+8081/tcp  open  tcpwrapped\
+8443/tcp  open  tcpwrapped\
+8888/tcp  open  tcpwrapped\
+9100/tcp  open  jetdirect?\
+9999/tcp  open  tcpwrapped\
+10000/tcp open  tcpwrapped\
+32768/tcp open  tcpwrapped\
+49152/tcp open  tcpwrapped\
+49153/tcp open  tcpwrapped\
+49154/tcp open  tcpwrapped\
+49155/tcp open  tcpwrapped\
+49156/tcp open  tcpwrapped\
+49157/tcp open  tcpwrapped\
+MAC Address: 00:50:79:66:68:06 (Private)\
+\
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .\
+Nmap done: 1 IP address (1 host up) scanned in 59.04 seconds\
+\
+\
+\
+\'97\'97\'97\'97\'97\
+
+\f0\fs24 \cf0 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 sudo nmap -sV -sC -p- -Pn -T4 192.168.1.17 -oA /home/debian/auditorias/pre/2_puertos_192.168.1.17\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \CocoaLigature0 sudo nmap -sV -F -T5 192.168.1.17
+\f0\fs24 \cf0 \CocoaLigature1 \
+
+\f1\fs22 \cf2 \CocoaLigature0 Starting Nmap 7.93 ( https://nmap.org ) at 2026-07-21 15:06 UTC\
+Nmap scan report for 192.168.1.17\
+Host is up (0.019s latency).\
+\
+PORT      STATE SERVICE    VERSION\
+7/tcp     open  tcpwrapped\
+9/tcp     open  tcpwrapped\
+13/tcp    open  tcpwrapped\
+21/tcp    open  tcpwrapped\
+22/tcp    open  tcpwrapped\
+23/tcp    open  tcpwrapped\
+25/tcp    open  tcpwrapped\
+26/tcp    open  tcpwrapped\
+37/tcp    open  tcpwrapped\
+53/tcp    open  tcpwrapped\
+79/tcp    open  tcpwrapped\
+80/tcp    open  tcpwrapped\
+81/tcp    open  tcpwrapped\
+88/tcp    open  tcpwrapped\
+106/tcp   open  tcpwrapped\
+110/tcp   open  tcpwrapped\
+111/tcp   open  tcpwrapped\
+113/tcp   open  tcpwrapped\
+119/tcp   open  tcpwrapped\
+135/tcp   open  tcpwrapped\
+139/tcp   open  tcpwrapped\
+143/tcp   open  tcpwrapped\
+144/tcp   open  tcpwrapped\
+179/tcp   open  tcpwrapped\
+199/tcp   open  tcpwrapped\
+389/tcp   open  tcpwrapped\
+427/tcp   open  tcpwrapped\
+443/tcp   open  tcpwrapped\
+444/tcp   open  tcpwrapped\
+445/tcp   open  tcpwrapped\
+465/tcp   open  tcpwrapped\
+513/tcp   open  tcpwrapped\
+514/tcp   open  tcpwrapped\
+515/tcp   open  tcpwrapped\
+543/tcp   open  tcpwrapped\
+544/tcp   open  tcpwrapped\
+548/tcp   open  tcpwrapped\
+554/tcp   open  tcpwrapped\
+587/tcp   open  tcpwrapped\
+631/tcp   open  tcpwrapped\
+646/tcp   open  tcpwrapped\
+873/tcp   open  tcpwrapped\
+990/tcp   open  tcpwrapped\
+993/tcp   open  tcpwrapped\
+995/tcp   open  tcpwrapped\
+1025/tcp  open  tcpwrapped\
+1026/tcp  open  tcpwrapped\
+1027/tcp  open  tcpwrapped\
+1028/tcp  open  tcpwrapped\
+1029/tcp  open  tcpwrapped\
+1110/tcp  open  tcpwrapped\
+1433/tcp  open  tcpwrapped\
+1720/tcp  open  tcpwrapped\
+1723/tcp  open  tcpwrapped\
+1755/tcp  open  tcpwrapped\
+1900/tcp  open  tcpwrapped\
+2000/tcp  open  tcpwrapped\
+2001/tcp  open  tcpwrapped\
+2049/tcp  open  tcpwrapped\
+2121/tcp  open  tcpwrapped\
+2717/tcp  open  tcpwrapped\
+3000/tcp  open  tcpwrapped\
+3128/tcp  open  tcpwrapped\
+3306/tcp  open  tcpwrapped\
+3389/tcp  open  tcpwrapped\
+3986/tcp  open  tcpwrapped\
+4899/tcp  open  tcpwrapped\
+5000/tcp  open  tcpwrapped\
+5009/tcp  open  tcpwrapped\
+5051/tcp  ope[ 1590.738324] clocksource: Long readout interval, skipping watchdog check: cs_nsec: 7835164980 wd_nsec: 7835165251\
+n  tcpwrapped\
+5060/tcp  open  tcpwrapped\
+5101/tcp  open  tcpwrapped\
+5190/tcp  open  tcpwrapped\
+5357/tcp  open  tcpwrapped\
+5432/tcp  open  tcpwrapped\
+5631/tcp  open  tcpwrapped\
+5666/tcp  open  tcpwrapped\
+5800/tcp  open  tcpwrapped\
+5900/tcp  open  tcpwrapped\
+6000/tcp  open  tcpwrapped\
+6001/tcp  open  tcpwrapped\
+6646/tcp  open  tcpwrapped\
+7070/tcp  open  tcpwrapped\
+8000/tcp  open  tcpwrapped\
+8008/tcp  open  tcpwrapped\
+8009/tcp  open  tcpwrapped\
+8080/tcp  open  tcpwrapped\
+8081/tcp  open  tcpwrapped\
+8443/tcp  open  tcpwrapped\
+8888/tcp  open  tcpwrapped\
+9100/tcp  open  jetdirect?\
+9999/tcp  open  tcpwrapped\
+10000/tcp open  tcpwrapped\
+32768/tcp open  tcpwrapped\
+49152/tcp open  tcpwrapped\
+49153/tcp open  tcpwrapped\
+49154/tcp open  tcpwrapped\
+49155/tcp open  tcpwrapped\
+49156/tcp open  tcpwrapped\
+49157/tcp open  tcpwrapped\
+MAC Address: 00:50:79:66:68:07 (Private)\
+\
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .\
+Nmap done: 1 IP address (1 host up) scanned in 55.79 seconds
+\f0\fs24 \cf0 \CocoaLigature1 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\'97\'97\'97\'97\'97\
+\
+\
+sudo nmap -sV -sC -p- -Pn -T4 192.168.1.18 -oA /home/debian/auditorias/pre/2_puertos_192.168.1.18\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \CocoaLigature0 sudo nmap -sV -F -T5 192.168.1.18\
+\
+\
+\'97\'97\'97\'97\
+
+\f0\fs24 \cf0 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+sudo nmap -sV -sC -p- -Pn -T4 192.168.1.19 -oA /home/debian/auditorias/pre/2_puertos_192.168.1.19\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \CocoaLigature0 sudo nmap -sV -F -T5 192.168.1.18
+\f0\fs24 \cf0 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\'97\'97\'97\'97\'97\
+\
+\
+sudo nmap -sV -sC -p- -Pn -T4 192.168.1.20 -oA /home/debian/auditorias/pre/2_puertos_192.168.1.20\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \CocoaLigature0 sudo nmap -sV -F -T5 192.168.1.20\
+\
+\
+\
+\
+\
+\
+\
+\
+\'97\'97\'97\'97\'97\'97\
+
+\f0\fs24 \cf0 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+sudo nmap -sV -sC -p- -Pn -T4 192.168.1.21 -oA /home/debian/auditorias/pre/2_puertos_192.168.1.21\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \CocoaLigature0 sudo nmap -sV -F -T5 192.168.1.21
+\f0\fs24 \cf0 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+\
+\'97\'97\'97\'97\
+\
+\
+sudo nmap -sV -sC -p- -Pn -T4 192.168.1.47 -oA /home/debian/auditorias/pre/2_puertos_192.168.1.47\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \CocoaLigature0 sudo nmap -sV -F -T5 192.168.1.47\
+Starting Nmap 7.93 ( https://nmap.org ) at 2026-07-21 15:09 UTC\
+Nmap scan report for 192.168.1.47\
+Host is up (0.042s latency).\
+Not shown: 96 closed tcp ports (reset)\
+PORT     STATE SERVICE       VERSION\
+22/tcp   open  ssh           OpenSSH 9.2p1 Debian 2+deb12u10 (protocol 2.0)\
+139/tcp  open  netbios-ssn   Samba smbd 4.6.2\
+445/tcp  open  netbios-ssn   Samba smbd 4.6.2\
+3389/tcp open  ms-wbt-server xrdp\
+MAC Address: 0C:86:53:CA:00:00 (Unknown)\
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel\
+\
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .\
+Nmap done: 1 IP address (1 host up) scanned in 14.68 seconds
+\f0\fs24 \cf0 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+
+\f1\fs22 \cf2 \CocoaLigature0 Nmap scan report for 192.168.1.47\
+Host is up (0.046s latency).\
+Not shown: 65531 closed tcp ports (reset)\
+PORT     STATE SERVICE       VERSION\
+22/tcp   open  ssh           OpenSSH 9.2p1 Debian 2+deb12u10 (protocol 2.0)\
+| ssh-hostkey: \
+|   256 269ea87447695c6d455a4d4ad179919d (ECDSA)\
+|_  256 11d8806a5abee2230ef1a0f94972021a (ED25519)\
+139/tcp  open  netbios-ssn   Samba smbd 4.6.2\
+445/tcp  open  netbios-ssn   Samba smbd 4.6.2\
+3389/tcp open  ms-wbt-server xrdp\
+MAC Address: 0C:86:53:CA:00:00 (Unknown)\
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel\
+\
+\
+sudo nmap -sV -sC -p- -Pn -T4 192.168.1.47\
+Starting Nmap 7.93 ( https://nmap.org ) at 2026-07-21 15:22 UTC\
+Stats: 0:01:09 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan\
+Host script results:\
+|_nbstat: NetBIOS name: DEBIAN, NetBIOS user: <unknown>, NetBIOS MAC: 000000000000 (Xerox)\
+| smb2-security-mode: \
+|   311: \
+|_    Message signing enabled but not required\
+| smb2-time: \
+|   date: 2026-07-21T15:27:38\
+|_  start_date: N/A\
+\
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .\
+Nmap done: 1 IP address (1 host up) scanned in 311.29 seconds
+\f0\fs24 \cf0 \CocoaLigature1 \
+\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\
+\
+\
+\
+sudo nmap -sV -sC -p- -Pn -T4 192.168.1.250 -oA /home/debian/auditorias/pre/2_puertos_192.168.1.250\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \CocoaLigature0 sudo nmap -sV -F -T5 192.168.1.250
+\f0\fs24 \cf0 \CocoaLigature1 \
+
+\f1\fs22 \cf2 \CocoaLigature0 Starting Nmap 7.93 ( https://nmap.org ) at 2026-07-21 15:10 UTC\
+Nmap scan report for 192.168.1.250\
+Host is up (0.076s latency).\
+Not shown: 96 closed tcp ports (reset)\
+PORT    STATE SERVICE     VERSION\
+21/tcp  open  ftp         vsftpd 3.0.3\
+22/tcp  open  ssh         OpenSSH 9.2p1 Debian 2+deb12u10 (protocol 2.0)\
+139/tcp open  netbios-ssn Samba smbd 4.6.2\
+445/tcp open  netbios-ssn Samba smbd 4.6.2\
+MAC Address: 0C:2A:3A:28:00:00 (Unknown)\
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel\
+\
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .\
+Nmap done: 1 IP address (1 host up) scanned in 15.78 seconds
+\f0\fs24 \cf0 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \CocoaLigature0  sudo nmap --script ftp-anon,smb-enum-shares,smb-security-mode -p 21,22,139,445 192.168.1.250\
+Starting Nmap 7.93 ( https://nmap.org ) at 2026-07-21 15:15 UTC\
+Nmap scan report for 192.168.1.250\
+Host is up (0.066s latency).\
+\
+PORT    STATE SERVICE\
+21/tcp  open  ftp\
+|_ftp-anon: Anonymous FTP login allowed (FTP code 230)\
+22/tcp  open  ssh\
+139/tcp open  netbios-ssn\
+445/tcp open  microsoft-ds\
+MAC Address: 0C:2A:3A:28:00:00 (Unknown)\
+\
+Nmap done: 1 IP address (1 host up) scanned in 2.20 seconds
+\f0\fs24 \cf0 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \CocoaLigature0 sudo nmap -sV -sC -p- -Pn -T4 192.168.1.250\
+Starting Nmap 7.93 ( https://nmap.org ) at 2026-07-21 15:30 UTC
+\f0\fs24 \cf0 \CocoaLigature1 \
+
+\f1\fs22 \cf2 \CocoaLigature0 Nmap scan report for 192.168.1.250\
+Host is up (0.045s latency).\
+Not shown: 65531 closed tcp ports (reset)\
+PORT    STATE SERVICE     VERSION\
+21/tcp  open  ftp         vsftpd 3.0.3\
+| ftp-syst: \
+|   STAT: \
+| FTP server status:\
+|      Connected to ::ffff:192.168.1.253\
+|      Logged in as ftp\
+|      TYPE: ASCII\
+|      No session bandwidth limit\
+|      Session timeout in seconds is 300\
+|      Control connection is plain text\
+|      Data connections will be plain text\
+|      At session startup, client count was 2\
+|      vsFTPd 3.0.3 - secure, fast, stable\
+|_End of status\
+|_ftp-anon: Anonymous FTP login allowed (FTP code 230)\
+22/tcp  open  ssh         OpenSSH 9.2p1 Debian 2+deb12u10 (protocol 2.0)\
+| ssh-hostkey: \
+|   256 269ea87447695c6d455a4d4ad179919d (ECDSA)\
+|_  256 11d8806a5abee2230ef1a0f94972021a (ED25519)\
+139/tcp open  netbios-ssn Samba smbd 4.6.2\
+445/tcp open  netbios-ssn Samba smbd 4.6.2\
+MAC Address: 0C:2A:3A:28:00:00 (Unknown)\
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel\
+\
+Host script results:\
+|_clock-skew: -2s\
+| smb2-security-mode: \
+|   311: \
+|_    Message signing enabled but not required\
+|_nbstat: NetBIOS name: DEBIAN, NetBIOS user: <unknown>, NetBIOS MAC: 000000000000 (Xerox)\
+| smb2-time: \
+|   date: 2026-07-21T15:33:17\
+|_  start_date: N/A\
+\
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .\
+Nmap done: 1 IP address (1 host up) scanned in 180.25 seconds
+\f0\fs24 \cf0 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+\'97\'97\'97\
+\
+sudo nmap -sV -sC -p- -Pn -T4 192.168.1.253 -oA /home/debian/auditorias/pre/2_puertos_192.168.1.253}

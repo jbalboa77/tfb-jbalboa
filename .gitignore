@@ -1,0 +1,6 @@
+*.gns3project
+*.qcow2
+*.img
+*.7z
+*.ova
+.DS_Store
