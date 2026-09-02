@@ -23,8 +23,8 @@ TFB/
 │ ├── Entregable1/ Documentos e información relacionada con el Entregable1
 │ └── Entregable2/ Documentos e información relacionada con el Entregable2
 │ └── Entregable3/ Documentos e información relacionada con el Entregable3
-├── FW-Config/ # Backups de config.xml de OPNsense
-├── FW-Rules/ # Reglas de firewall exportadas en CSV
+├── FW-Config/ # Backups de config.xml de OPNsense, diferentes xml con fecha de backups
+├── FW-Rules/ # Reglas de firewall exportadas en CSV, diferentes csv con niveles de configuración
 ├── gns3-project/ # Proyecto GNS3 exportado (topología, sin imágenes base — ver enlace de descarga)
 ├── Imagenes/ # Capturas de evidencia (consola OPNsense, GNS3, resultados de auditoría...)
 ├── .gitignore
@@ -34,7 +34,7 @@ TFB/
 
 Por su tamaño, estos archivos **no se alojan en este repositorio** (están excluidos vía `.gitignore`):
 
-| Archivo | Tamaño aprox. | Descarga |
+| Nombre archivo | Link Descarga |
 |---|---|---|
 | `TFB-JoelBalboa-GNS3.gns3project` | *(https://drive.google.com/drive/folders/1fusnXwhiPQ4gHdwgDWkHe63tafWOeTSN?usp=share_link)* |
 

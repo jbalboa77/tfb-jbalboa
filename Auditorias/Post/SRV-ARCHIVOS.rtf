@@ -1,0 +1,111 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\csgray\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 #SERVIDOR ARCHIVOS\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+#ESCANEO PUERTOS \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \CocoaLigature0 sudo nmap -sV -sC -p- -Pn -T4 192.168.99.5\
+Starting Nmap 7.93 ( https://nmap.org ) at 2026-09-02 08:18 UTC\
+Nmap scan report for 192.168.99.5\
+Host is up (0.016s latency).\
+Not shown: 65533 filtered tcp ports (no-response)\
+PORT    STATE  SERVICE     VERSION\
+443/tcp closed https\
+445/tcp open   netbios-ssn Samba smbd 4.6.2\
+\
+Host script results:\
+| smb2-time: \
+|   date: 2026-09-02T08:21:00\
+|_  start_date: N/A\
+| smb2-security-mode: \
+|   311: \
+|_    Message signing enabled but not required\
+\
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .\
+Nmap done: 1 IP address (1 host up) scanned in 160.45 seconds\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \CocoaLigature1 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+#ESCANEO  SCRIPTS\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \CocoaLigature0  sudo nmap --script ftp-anon,smb-enum-shares,smb-security-mode -p 21,22,139,445 192.168.99.5\
+Starting Nmap 7.93 ( https://nmap.org ) at 2026-09-02 11:21 UTC\
+Nmap scan report for 192.168.99.5\
+Host is up (0.014s latency).\
+\
+PORT    STATE    SERVICE\
+21/tcp  filtered ftp\
+22/tcp  filtered ssh\
+139/tcp filtered netbios-ssn\
+445/tcp open     microsoft-ds\
+\
+Nmap done: 1 IP address (1 host up) scanned in 19.68 seconds\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \CocoaLigature1 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+#VERIFICACI\'d3N ACCESO FTP ANONIMO\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \CocoaLigature0  ftp 192.168.99.5\
+ftp: Can't connect to `192.168.99.5:21': Connection timed out\
+ftp: Can't connect to `192.168.99.5:ftp'\
+ftp> 
+\f0\fs24 \cf0 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+#VERIFICACI\'d3N SSH\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \CocoaLigature0 ssh root@192.168.5.99\
+ssh: connect to host 192.168.5.99 port 22: Connection timed out
+\f0\fs24 \cf0 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \CocoaLigature0 smbclient -L //192.168.99.5 -N\
+\
+	Sharename       Type      Comment\
+	---------       ----      -------\
+	print$          Disk      Printer Drivers\
+	archivos-compartidos Disk      \
+	IPC$            IPC       IPC Service (Samba 4.17.12-Debian)\
+	nobody          Disk      Home Directories\
+SMB1 disabled -- no workgroup available\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+ smbclient //192.168.99.5/archivos-compartidos -N\
+Try "help" to get a list of possible commands.\
+smb: \\> ?\
+?              allinfo        altname        archive        backup         \
+blocksize      cancel         case_sensitive cd             chmod          \
+chown          close          del            deltree        dir            \
+du             echo           exit           get            getfacl        \
+geteas         hardlink       help           history        iosize         \
+lcd            link           lock           lowercase      ls             \
+l              mask           md             mget           mkdir          \
+more           mput           newer          notify         open           \
+posix          posix_encrypt  posix_open     posix_mkdir    posix_rmdir    \
+posix_unlink   posix_whoami   print          prompt         put            \
+pwd            q              queue          quit           readlink       \
+rd             recurse        reget          rename         reput          \
+rm             rmdir          showacls       setea          setmode        \
+scopy          stat           symlink        tar            tarmode        \
+timeout        translate      unlock         volume         vuid           \
+wdel           logon          listconnect    showconnect    tcon           \
+tdis           tid            utimes         logoff         ..             \
+!              \
+smb: \\> }

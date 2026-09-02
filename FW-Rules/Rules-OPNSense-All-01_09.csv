@@ -1,0 +1,33 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+@uuid,enabled,statetype,state-policy,sequence,action,quick,interfacenot,interface,direction,ipprotocol,protocol,icmptype,icmp6type,gateway,replyto,disablereplyto,log,allowopts,nosync,nopfsync,statetimeout,max-src-nodes,max-src-states,max-src-conn,max,max-src-conn-rate,max-src-conn-rates,overload,adaptivestart,adaptiveend,prio,set-prio,set-prio-low,tag,tagged,tcpflags1,tcpflags2,categories,sched,tos,shaper1,shaper2,description,source_not,source_net,source_port,destination_not,destination_net,destination_port
+ebb75989-b24c-42ba-aef7-10903f455063,1,keep,,1,pass,1,0,wan,in,inet,TCP,,,,,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,"Acceso temporal GUI desde GNS3 VM",0,192.168.42.0/24,,0,any,443
+752f31dc-5587-4ebf-8f69-9a47b8e0c30d,1,keep,,11,pass,1,0,wan,in,inet,TCP/UDP,,,,,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,0,any,,0,wanip,51820
+5b4b7a9f-91de-45fa-bab8-d6fd3466b032,0,keep,,21,pass,1,0,lan,in,inet,any,,,,,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,"Default allow LAN to any rule",0,lan,,0,any,
+2e3bd082-0f9f-490f-a87d-3791167d4338,1,keep,,31,pass,1,0,lan,in,inet,TCP/UDP,,,,,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,"Regla INET limitada",0,any,,0,any,PUERTOS_SALIDA_PERMITIDA
+f37b120d-679d-4331-a555-6d8d11a5bbf7,1,keep,,41,pass,1,0,opt1,in,inet,TCP,,,,,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,0,opt1,,0,192.168.99.5/32,PUERTOS_PERMITIDOS_SERVIDOR
+9e30d40d-597f-4375-aee3-af7be263937a,1,keep,,51,pass,1,0,opt1,in,inet,TCP,,,,,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,0,opt1,,1,REDES_PRIVADAS,80-443
+82ae8ba6-cf7e-41f3-bd0d-f5c415e50fb1,1,keep,,61,pass,1,0,opt1,in,inet,UDP,,,,,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,0,opt1,,1,REDES_PRIVADAS,53
+3002d8cb-e82d-444b-b1e2-c59f433dca40,1,keep,,71,pass,1,0,opt2,in,inet,TCP,,,,,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,0,opt2,,0,192.168.99.5/32,PUERTOS_PERMITIDOS_SERVIDOR
+c900b98c-6758-4ac4-8850-a446559f309c,1,keep,,81,pass,1,0,opt2,in,inet,TCP,,,,,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,0,opt2,,1,REDES_PRIVADAS,80-443
+7a8671ca-cc7a-41b7-abc6-305ef08656a3,1,keep,,91,pass,1,0,opt2,in,inet,UDP,,,,,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,0,opt2,,1,REDES_PRIVADAS,53
+c9ed097c-09c8-4c76-874a-0b3fa2fc54e2,1,keep,,101,pass,1,0,opt3,in,inet,TCP,,,,,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,0,opt3,,0,192.168.99.5/32,PUERTOS_PERMITIDOS_SERVIDOR
+2f3ed002-7888-447b-9681-7e03bb0b456a,1,keep,,111,pass,1,0,opt3,in,inet,TCP,,,,,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,0,opt3,,0,any,80-443
+6cf33afd-0148-45d4-8e99-13cd6d760ccb,1,keep,,121,pass,1,0,opt3,in,inet,UDP,,,,,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,0,opt3,,0,any,53
+f78091e0-24fd-441f-a154-701b89d776e4,1,keep,,131,pass,1,0,opt4,in,inet,TCP,,,,,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,0,opt4,,0,192.168.99.5/32,PUERTOS_PERMITIDOS_SERVIDOR
+bf04c567-c5be-4e7d-ac3d-26bb4d64a11d,1,keep,,141,pass,1,0,opt4,in,inet,TCP,,,,,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,0,opt4,,0,any,80-443
+3aa33052-5026-451f-80ff-6167a539aa72,1,keep,,151,pass,1,0,opt4,in,inet,UDP,,,,,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,0,opt4,,0,any,53
+3ee8b251-d67d-4ba7-96bb-7d3e09fa5fd0,1,keep,,161,pass,1,0,opt5,in,inet,TCP/UDP,,,,,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,0,opt5,,0,REDES_DESPACHO,PUERTOS_SOPORTE_IT
+d8da4784-64e8-49cd-96a7-ad866f9200c7,1,keep,,171,pass,1,0,opt5,in,inet,ICMP,,,,,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,0,opt5,,0,REDES_DESPACHO,
+6d061031-3a4f-4467-876d-11a5bee2eb76,1,keep,,181,pass,1,0,opt5,in,inet,TCP/UDP,,,,,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,0,opt5,,0,RED_GESTION,PUERTOS_ADMIN_GESTION
+0b60e98f-ed45-4054-a2b9-d43ad2745de1,1,keep,,191,pass,1,0,opt5,in,inet,TCP,,,,,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,0,opt5,,0,any,80-443
+49e1c4ce-160b-4149-a174-b4b38d429c9a,1,keep,,201,pass,1,0,opt5,in,inet,TCP/UDP,,,,,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,0,opt5,,0,any,53
+9676cba6-74f0-411f-bf7c-ef1b7c2d994d,1,keep,,211,pass,1,0,opt6,in,inet,TCP,,,,,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,0,opt6,,1,REDES_PRIVADAS,80-443
+230b9424-e48c-46f2-920c-3b5587d3438a,1,keep,,221,pass,1,0,opt6,in,inet,ICMP,,,,,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,0,opt6,,1,REDES_PRIVADAS,
+aa98d833-41a0-45ae-b04e-fb9fc6b02bea,1,keep,,231,pass,1,0,opt6,in,inet,TCP/UDP,,,,,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,0,opt6,,1,REDES_PRIVADAS,53
+02f577c8-c5d7-40fa-a48b-8cbfaa8c3e37,1,keep,,241,pass,1,0,wireguard,in,inet,TCP,,,,,0,0,0,0,0,,,,,,,,,,,,,,,,,,,,,,,,0,any,,0,192.168.99.5/32,PUERTOS_PERMITIDOS_SERVIDOR
